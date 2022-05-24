@@ -62,7 +62,7 @@ function App() {
                         style={{ background: "#" + label.color }}>
                         {label.name}
                       </div>
-                    </OverlayTrigger> : <div className="d-inline-flex label m-1 p-1"
+                    </OverlayTrigger> : <div  key={label.id} className="d-inline-flex label m-1 p-1"
                       style={{ background: "#" + label.color }}>
                       {label.name}
                     </div>
@@ -74,9 +74,7 @@ function App() {
 
               </div>
             </div>
-            <div className="flex-shrink-0 col-3 pt-2 text-right pr-3 no-wrap d-flex hide-sm ">
-              <span className="ml-2 flex-1 flex-shrink-0">
-              </span>
+            <div className="flex-shrink-0 col-2 pt-2 text-right pr-3 no-wrap d-flex ">
               <span className="ml-2 flex-1 flex-shrink-0">
                 {data?.assignee && <img src={data?.assignee?.avatar_url} height="20" width="20" alt={data?.assignee?.login}></img>}
               </span>
