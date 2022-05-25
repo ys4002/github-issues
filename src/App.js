@@ -8,7 +8,6 @@ function App() {
   const [page, setPage] = useState(1);
   const { loading, error, gitData } = useCustomFetch(page);
   const loader = useRef(null);
-  const tooltipRef = useRef();
 
   const handleObserver = useCallback((entries) => {
     const target = entries[0];
